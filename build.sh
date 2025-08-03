@@ -8,7 +8,7 @@ set -e
 set -x
 
 debug=false
-gcc=false
+gcc=true
 # Parse command line arguments
 while [[ $# -gt 0 ]]
 do
@@ -64,11 +64,11 @@ if [ "$(uname)" == "Darwin" ]; then
     export CXX="$(brew --prefix)/opt/llvm/bin/clang++"
 else
     if $gcc; then
-        export CC="gcc-8"
-        export CXX="g++-8"
+        export CC="gcc"
+        export CXX="g++"
     else
-        export CC="clang-8"
-        export CXX="clang++-8"
+        export CC="clang"
+        export CXX="clang++"
     fi
 fi
 
@@ -107,7 +107,7 @@ if $debug; then
         || (popd && rm -r $build_dir && exit 1)   
 else
     folder_name="Release"
-    "$CMAKE" ../cmake -DCMAKE_BUILD_TYPE=Release $CMAKE_VARS \
+    "$CMAKE" ../cmake  -DCMAKE_POLICY_VERSION_MINIMUM=3.5 -DCMAKE_BUILD_TYPE=Release $CMAKE_VARS \
         || (popd && rm -r $build_dir && exit 1)
 fi
 popd >/dev/null

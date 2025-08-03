@@ -24,6 +24,8 @@
   <build_depend>geographic_msgs</build_depend>
   <build_depend>geometry_msgs</build_depend>
   <build_depend>tf2_sensor_msgs</build_depend>
+  <build_depend>tf2_ros</build_depend>
+  <build_depend>tf2_geometry_msgs</build_depend>
   
   <depend>airsim_interfaces</depend>
 
@@ -41,7 +43,8 @@
   <exec_depend>sensor_msgs</exec_depend>
   <exec_depend>std_msgs</exec_depend>
   <exec_depend>joy</exec_depend>
-
+  <exec_depend>tf2_ros</exec_depend>
+  <exec_depend>tf2_geometry_msgs</exec_depend>
   <buildtool_depend>rosidl_default_generators</buildtool_depend>
   <exec_depend>rosidl_default_runtime</exec_depend>
 

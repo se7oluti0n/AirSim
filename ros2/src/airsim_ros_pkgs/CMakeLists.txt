@@ -22,6 +22,7 @@ find_package(rosidl_typesupport_cpp REQUIRED)
 find_package(rosidl_default_runtime REQUIRED)
 find_package(airsim_interfaces REQUIRED)
 find_package(OpenCV REQUIRED)
+find_package(tf2_ros REQUIRED)
 
 set(AIRSIM_ROOT ${CMAKE_CURRENT_SOURCE_DIR}/../../../)
 
