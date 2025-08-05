@@ -12,7 +12,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # --- Find OpenCV ---
 # OpenCV is used for image processing and creating a display window.
-find_package(OpenCV 4.11 REQUIRED)
+find_package(OpenCV REQUIRED)
 
 IncludeEigen()
 
